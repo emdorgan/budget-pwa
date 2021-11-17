@@ -22,6 +22,15 @@ request.onerror = function(event) {
     console.log("OOPS! " + event.target.errorCode);
 }
 
+function saveRecord(record){
+    //create a transaction to our indexDB
+    const transaction = db.transaction(["pending"], "readwrite");
+    // access our indexDB
+    const store = transaction.objectStore("pending");
+    // add record
+    store.add(record);
+}
+
 function checkDatabase(){
     //handles reconnection to database
 }
