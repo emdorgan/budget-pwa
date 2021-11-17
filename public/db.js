@@ -1,4 +1,4 @@
-//Initialize db variable and create a new indexDB request for a 'budget' database
+//Initialize db variable and create a new indexedDB request for a 'budget' database
 
 let db;
 const request = indexedDB.open("budget", 1)
