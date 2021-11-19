@@ -1,3 +1,5 @@
+// the files in the public directory (except icons) get cached
+
 const FILES_TO_CACHE = [
     "/",
     "/styles.css",
@@ -8,6 +10,7 @@ const FILES_TO_CACHE = [
 const STATIC_CACHE = "static-cache-v1";
 const RUNTIME_CACHE = "runtime-cache";
 
+// the install handler sets up the cache to be used
 self.addEventListener("install", event => {
   event.waitUntil(
     caches
